@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js">
     <head>
         <!-- Basic Page Needs
@@ -61,8 +61,7 @@
                 <div class="block">
                     <h2>Induction Heater</h2>
                     <div class="portfolio-meta">
-                       <span>Portfolio</span>|
-                       <span> Category: Electronics & Power</span>
+                       <span> Skills Developed: High Power PCB Design / Circuit Analysis </span>
                     </div>
                 </div>
             </div>
@@ -74,11 +73,22 @@
     <div class="container">
         <div class="row" style="margin-bottom: 50px;">
             <div class="col-md-12">
-                <img class="img-responsive" alt="Induction heater" src="images/portfolio/inductor_heater.jpeg" style="max-height: 420px; width: auto; margin: 0 auto; display: block; border-radius: 6px;">
+                <img class="img-responsive" alt="Induction heater" src="images/portfolio/ind_heat_schem.png" style="max-height: 420px; width: auto; margin: 0 auto; display: block; border-radius: 6px;">
                 <div class="portfolio-content" style="margin-top: 20px;">
-                    <h3>Induction Heater Build</h3>
+                    <h3>What is an Induction Heater</h3>
                     <p>
-                        This induction heater was built to rapidly heat conductive parts using a high-frequency magnetic field. The design targets stable power delivery and repeatable heating behavior while keeping the hardware compact enough for bench use.
+                        An induction heater uses a resonant LC tank and a pair of MOSFETs (sometimes four as well) that utilizes
+                        Zero Voltage Switching to generate a high-frequency alternating current. Essentially the MOSFETs get turned off and
+                        on rapidly (at resonant frequency) creating high frequency AC that goes through the inductor. 
+                        <br>
+                        The heater coil then producses a high frequency alternating magenetic field, which
+                        when a conductive material is place inside, the magetic field induces eddy currents within the material, and the 
+                        currents heat it up. So, if we put something with little conductance at all like our fingers, it will not heat up at all. 
+                        <br>
+                        The schematic for this circuit is quite simple, but the concepts and math are quite interesting (technically in a perfect world, an induction heater
+                        would not even work as both mosfet gates would open at the same time preventing self-oscillation, but we can infer once is more conductive than the other in the real world) <br><br>
+
+                        
                     </p>
                 </div>
             </div>
@@ -86,25 +96,29 @@
 
         <div class="row" style="margin-bottom: 50px;">
             <div class="col-md-6 col-sm-12" style="margin-bottom: 20px;">
-                <img class="img-responsive" alt="Induction heater schematic" src="images/portfolio/ind_heater_schem.png" style="border-radius: 6px;">
+                <img class="img-responsive" alt="Induction heater schematic" src="images/portfolio/ind_heat_layout.png" style="border-radius: 6px;">
             </div>
             <div class="col-md-6 col-sm-12">
-                <h3>Schematic</h3>
+                <h3>PCB Layout</h3>
                 <p>
-                    The schematic shows the power stage, resonant tank, gate drive path, and protection features. It is organized to keep control and power domains clear, making debugging and future revisions easier.
+                    The PCB consists of two toroidal coils that acts as chokes to reduce electrical noise and blocks AC current coming back into 
+                    the input supply. The mosfets are used for switching the direction of current through the LC resonant tank, and of course the 
+                    capacitor and heating inductor are used to form the LC tank.  
                 </p>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <h3>PCB Layout</h3>
+                <h3>Prototype</h3>
                 <p>
-                    The PCB layout emphasizes short high-current loops, thermal spreading, and clean routing around switching nodes. This helps reduce losses and noise while improving reliability at higher load conditions.
+                    After creating a schematic I quickly developed a protoype to test if my schematic values would actually end up working before I order
+                    the PCB. I ran 4 volts through the board and was able to draw over an amp, but as I increased the voltage, I found that I vastly underestimated the size of MOSFET
+                    heat syncs needed and one of them quickly burnt out. However, besides that the prototype showed promising results so I ordered the PCB. 
                 </p>
             </div>
             <div class="col-md-6 col-sm-12" style="margin-top: 20px;">
-                <img class="img-responsive" alt="Induction heater PCB" src="images/portfolio/ind_heater_pcb.png" style="border-radius: 6px;">
+                <img class="img-responsive" alt="Induction heater Protoype" src="images/portfolio/inductor_heater.jpeg" style="border-radius: 6px;">
             </div>
         </div>
     </div>

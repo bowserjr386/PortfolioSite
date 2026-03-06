@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js">
     <head>
         <meta charset="utf-8">
@@ -60,8 +60,7 @@
                         <div class="block">
                             <h2>Formula & Board Design</h2>
                             <div class="portfolio-meta">
-                                <span>Portfolio</span>|
-                                <span> Category: PCB Design & Formula</span>
+                                <span> Skills Developed: PCB Design / Leadership / Debugging / SMD Soldering</span>
                             </div>
                         </div>
                     </div>
@@ -82,14 +81,19 @@
                             </div>
                         </div>
 
-                        <h3 class="section-subtitle">My First Board</h3>
+                        <h3 class="section-subtitle">First Formula Board</h3>
                         <div class="row board-row">
                             <div class="col-md-5 col-sm-12">
                                 <img class="board-img img-responsive" alt="Charging board" src="images/portfolio/mychargingboard.jpeg">
                             </div>
                             <div class="col-md-7 col-sm-12">
                                 <div class="portfolio-content">
-                                    <p>My first PCB was this charging board, designed to manage battery charging and power distribution for a small system. I learned layout fundamentals, component selection, and how to keep high-current paths short and well-connected. This board gave me the foundation for the more complex designs that followed.</p>
+                                    <p>This is the first board that was given to me as a freshman in formula. The goal of the board is to enable communication between 
+                                        our accumulator and our J1772 charger through CAN. I was building off the past board, and was tasked to clean up the board layout (it was pretty bad before),
+                                        clean up the schematic, and add a 7 segment display. I implemented the 7 segement display by adding in a LED driver to let us control it without
+                                        using an insane amount of pins on our MCU. The point of adding the display was to allow us to to easily tell us information about the charging process. I wanted to use it
+                                        to display battery percent so I implemented coloumb counting as we were already reading current from our g-meter, so I just had to setup CAN to read it and so some calculations on the board. 
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -99,11 +103,14 @@
                         <h4 class="board-header">Power Distribution Unit</h4>
                         <div class="row board-row board-row-lead">
                             <div class="col-md-7 col-sm-12">
-                                <img class="board-img img-responsive" alt="PDU PCB" src="images/portfolio/pdu_pcb.jpg">
+                                <img class="board-img img-responsive" alt="PDU PCB" src="images/portfolio/pdu.png">
                             </div>
                             <div class="col-md-5 col-sm-12">
                                 <div class="portfolio-content">
-                                    <p>The Power Distribution Unit (PDU) PCB consolidates and switches power for the vehicle's low-voltage systems. I led the schematic and layout, including fuse placement, current sensing, and robust grounding so each subsystem gets clean, protected power.</p>
+                                    <p>This is our car's biggest board, and was a new addtion to our car last year. It basically houses a bunch of sensing boards, as well as a lot of LEDs that correspond to shutdown nodes
+                                        on our car, letting us easily debug the board. Other purposes of the board include displaying information about our high voltage system on a 7 segment display, 
+                                        and controlling a cooling fan for our motor.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +122,10 @@
                             </div>
                             <div class="col-md-5 col-sm-12">
                                 <div class="portfolio-content">
-                                    <p>The BMS (Battery Management System) core handles cell monitoring, balancing, and safety limits for the accumulator. I was responsible for the analog front-end and communication interface so the rest of the stack can read pack state and enforce limits reliably.</p>
+                                    <p>This board is a key part of our battery management system. For a large part, it is recieving information from a lot of boards in our BMS
+                                        such as the Cell Supervisory Circuit board, and has a current sensing trip and is able to trigger the BMS shutdown relay. The main target with the board this year
+                                        was switching from atmega MCU to a STM32. 
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +137,9 @@
                             </div>
                             <div class="col-md-5 col-sm-12">
                                 <div class="portfolio-content">
-                                    <p>The new charging board schematic improves on the first design with better protection, clearer current paths, and a more modular layout. This revision supports higher charge rates and integrates status and fault reporting for easier debugging and operation.</p>
+                                    <p>Back to this exciting board. The main changes we made this year was a switch to an LCD from a 7 segment display as it makes the UI
+                                        much nicer, though pricier in the end. We also switched this board from an atmega to a STM32. 
+                                    </p>
                                 </div>
                             </div>
                         </div>
